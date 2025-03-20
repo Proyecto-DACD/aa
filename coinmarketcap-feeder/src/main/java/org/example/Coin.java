@@ -1,7 +1,7 @@
 package org.example;
 
 public class Coin {
-    private int id;
+    private int hola;
     private String name;
     private int i;
     private String symbol;
