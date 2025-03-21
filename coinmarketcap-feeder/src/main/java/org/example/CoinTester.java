@@ -12,7 +12,8 @@ import java.util.Map;
 public class CoinTester {
     public static void main(String[] args) throws IOException {
         Map<String, String> queries = new HashMap<>();
-        queries.put("slug", "bitcoin,ethereum");
+        queries.put("slug", "bitcoin,ethereum,tether");
+        queries.put("convert", "USD,EUR,GBP,CNY,YEN");
 
         CoinMarketCapConnection connection = new CoinMarketCapConnection("b54bcf4d-1bca-4e8e-9a24-22ff2c3d462c",
                 "https://sandbox-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest",
@@ -21,6 +22,8 @@ public class CoinTester {
         CoinMarketCapFetcher content = new CoinMarketCapFetcher();
         String json = content.getResponseJson(connection.createConnection());
 
-        System.out.println(json );
+        Gson gson = new Gson();
+
+        System.out.println(json);
     }
 }

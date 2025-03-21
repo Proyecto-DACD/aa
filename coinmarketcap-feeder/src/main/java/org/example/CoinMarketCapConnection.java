@@ -6,9 +6,9 @@ import org.jsoup.Jsoup;
 import java.util.Map;
 
 public class CoinMarketCapConnection {
-    private String apiKey;
-    private String endPoint;
-    private Map<String, String> queries;
+    private final String apiKey;
+    private final String endPoint;
+    private final Map<String, String> queries;
 
     public CoinMarketCapConnection(String apiKey, String endPoint, Map<String, String> queries) {
         this.apiKey = apiKey;
